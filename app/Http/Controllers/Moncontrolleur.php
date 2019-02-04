@@ -49,6 +49,25 @@ class Moncontrolleur extends Controller
         return view('film',["film" => $film]);
 
     }
+
+    function ajout(){
+        return view('formAjout');
+    }
     
+    function cree(Request $request){
+        $request->validate([
+            'titre'=>"required|min:3",
+            'annee'=>"required|min:4",
+            'nbSpectateurs'=>"required"
+            
+        ]);
+
+        $f = new Film();
+        $f->titre = $request->input('titre');
+        $f->annee = $request->input('annee');
+        $f->nbSpectateurs = $request->input('nbSpectateurs');
+        $f->save();
+        return redirect("/");
+    }
 
 }

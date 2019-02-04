@@ -25,7 +25,9 @@ Route::Get('/films','Moncontrolleur@films');
 
 Route::Get('/film/{id}', 'Moncontrolleur@film')->where('id', '[0-9]+');
 
+Route::Get('/ajouterFilm', 'Moncontrolleur@ajout');
 
+Route::Post('/creeFilm','Moncontrolleur@cree');
 
 
 Auth::routes();

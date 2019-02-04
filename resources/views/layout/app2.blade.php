@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset='UTF-8'>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
 </head>
@@ -12,6 +13,7 @@
     <a href="/">Home</a>
     <a href="/personnes">Les personnes</a>
     <a href="/films">Les films</a>
+    <a href="/ajouterFilm">Ajoutez un film</a>
     
 </nav>
 
