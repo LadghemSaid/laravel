@@ -23,5 +23,11 @@ Route::Get('/personne/{id}', 'Moncontrolleur@personne')->where('id','[0-9]+');
 
 Route::Get('/films','Moncontrolleur@films');
 
+Route::Get('/film/{id}', 'Moncontrolleur@film')->where('id', '[0-9]+');
 
 
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

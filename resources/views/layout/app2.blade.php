@@ -11,6 +11,8 @@
 <nav>
     <a href="/">Home</a>
     <a href="/personnes">Les personnes</a>
+    <a href="/films">Les films</a>
+    
 </nav>
 
 <div class="container">

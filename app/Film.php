@@ -12,5 +12,8 @@ class Film extends Model
 public function realisateur(){
     return $this->belongsTo("App\Personne","idRealisateur");
 }
+public function acteurs(){
+    return $this->belongsToMany("App\Personne","joue","idFilm","idActeur");
+}
 
 }

@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.app2')
 
 @section('content')
     <h1>Toutes les personnes de la BD :</h1>

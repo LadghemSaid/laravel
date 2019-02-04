@@ -36,6 +36,19 @@ class Moncontrolleur extends Controller
 
 
     function films(){
-        
+        $films= Film::all();
+        return view('films',["films" => $films]);
     }
+
+
+    function film($id){
+        $film= Film::find($id);
+        if(!$film){
+            return abort('404');
+        }
+        return view('film',["film" => $film]);
+
+    }
+    
+
 }
